@@ -1,7 +1,11 @@
 import { Mutator } from "./mutator";
 
 export class SiteReplacer implements Mutator {
-    protected sites: Array<string> = ["reddit", "stackoverflow", "github"];
+    sites: string[];
+
+    constructor(sites: string[] = []) {
+        this.sites = sites;
+    }
 
     mutate(query: string): string {
         const words = query.split(" ");

@@ -1,5 +1,4 @@
 export function getQuery(): string {
-    console.log(window.document.querySelector('[aria-label="Search"]'));
     var searchBarElement = window.document.querySelector(
         '[aria-label="Search"]'
     );
